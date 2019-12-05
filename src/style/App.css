@@ -1,0 +1,24 @@
+.App {
+  width: 400px;
+  height: 100%;
+  text-align: center;
+}
+.weatherIcon {
+  width: 30%;
+}
+img.bg {
+  /* Set rules to fill background */
+  min-height: 350px;
+  min-width: 400px;
+
+  /* Set up proportionate scaling */
+  width: 400px;
+  height: 350px;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  -webkit-filter: blur(2px);
+}

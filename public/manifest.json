@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Météo Chrome",
+  "author": "Da Fonseca Esteves Leonardo",
+  "version": "0.0.1",
+
+  "description": "Extension pour afficher la météo locale en un click",
+  "icons": { "16": "./logo.png", "46": "./logo.png", "128": "./logo.png" },
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Météo Chrome"
+  },
+
+  "content_security_policy": "script-src 'self' 'sha256-lcnlphARuspZtc2LpVe3D2Zznpv2q6SR5LXkIda9LqM='; object-src 'self'",
+  "permissions": ["geolocation"]
+}
