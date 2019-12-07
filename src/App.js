@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import View from "./components/view";
+import background from "./img/fond.jpg";
+import "./style/App.css";
+
 const Req = require("./utils/request");
 
 function App() {
@@ -11,11 +14,8 @@ function App() {
   });
 
   useEffect(() => {
-    if (navigator.geolocation) {
+    if (navigator.geolocation)  
       navigator.geolocation.getCurrentPosition(myPosition);
-    } else {
-      alert("Vous n'avez pas accepté la localisation.");
-    }
   }, []);
 
   const myPosition = position => {
@@ -29,7 +29,11 @@ function App() {
     });
   };
 
-  return <View state={state} />;
+  return (
+    <div className="App">
+      <img className="bg" src={background} alt="Background" />
+      {state.city === "" ? <h1>Probleme de connexion internet</h1> : <View state={state} />}
+    </div>)
 }
 
 export default App;
