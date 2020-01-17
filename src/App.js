@@ -14,7 +14,7 @@ function App() {
   });
 
   useEffect(() => {
-    if (navigator.geolocation)  
+    if (navigator.geolocation)
       navigator.geolocation.getCurrentPosition(myPosition);
   }, []);
 
@@ -32,8 +32,13 @@ function App() {
   return (
     <div className="App">
       <img className="bg" src={background} alt="Background" />
-      {state.city === "" ? <h1>Probleme de connexion internet</h1> : <View state={state} />}
-    </div>)
+      {state.city === "" ? (
+        <h1>Probleme de connexion internet</h1>
+      ) : (
+        <View state={state} />
+      )}
+    </div>
+  );
 }
 
 export default App;
